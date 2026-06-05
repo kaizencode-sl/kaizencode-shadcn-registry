@@ -14,12 +14,16 @@ import { DevelopedByKaizencode } from "@/components/ui/developed-by-kaizencode"
 
 <Layout>
   <div class="flex min-h-dvh flex-col">
-    <header class="sticky top-0 z-10 mx-auto flex w-full max-w-2xl items-center justify-between border-b border-border/50 bg-background/80 px-4 py-3 backdrop-blur-xl sm:px-6">
+    <header
+      class="sticky top-0 z-10 mx-auto flex w-full max-w-2xl items-center justify-between border-b border-border/50 bg-background/80 px-4 py-3 backdrop-blur-xl sm:px-6"
+    >
       <span class="text-sm font-medium">kaizencode-shadcn-registry</span>
       <ThemeToggle client:only="react" />
     </header>
     <main class="flex-1">
-      <div class="mx-auto w-full max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:py-24">
+      <div
+        class="mx-auto w-full max-w-2xl px-4 py-12 sm:px-6 sm:py-16 lg:py-24"
+      >
         <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
           Kaizencode Registry
         </h1>
@@ -40,20 +44,27 @@ import { DevelopedByKaizencode } from "@/components/ui/developed-by-kaizencode"
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <DevelopedByKaizencode className="justify-start rounded-md bg-muted/50 p-3" />
+                <DevelopedByKaizencode
+                  className="justify-start rounded-md bg-muted/50 p-3"
+                />
               </CardContent>
-              <CardFooter className="flex-col items-stretch gap-3 border-t pt-5">
+              <CardFooter
+                className="flex-col items-stretch gap-3 border-t pt-5"
+              >
                 <p class="text-xs font-medium text-muted-foreground">
                   Installation
                 </p>
-                <pre class="max-w-full overflow-x-auto rounded-lg border bg-muted/50 p-3 text-xs"><code>pnpm dlx shadcn@latest add @kaizencode/developed-by-kaizencode</code></pre>
+                <pre
+                  class="max-w-full overflow-x-auto rounded-lg border bg-muted/50 p-3 text-xs"><code>pnpm dlx shadcn@latest add @kaizencode/developed-by-kaizencode</code></pre>
               </CardFooter>
             </Card>
           </div>
         </section>
       </div>
     </main>
-    <footer class="mx-auto flex w-full max-w-2xl border-t border-border/50">
+    <footer
+      class="mx-auto flex w-full max-w-2xl border-t border-border/50 py-8"
+    >
       <DevelopedByKaizencode className="w-full justify-start" />
     </footer>
   </div>
