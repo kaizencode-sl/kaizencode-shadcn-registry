@@ -56,7 +56,6 @@ Available components are showcased on the homepage (`src/pages/index.astro`).
 ├── registry.json          ← Registry catalog (entry point for external consumption)
 ├── src/
 │   components/
-│     component-card.astro ← Reusable card for showcasing components on homepage
 │     ui/                  ← shadcn React components (also registry source files)
 │   layouts/
 │     main.astro           ← Base Astro layout (head, SEO, global styles)

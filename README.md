@@ -117,7 +117,6 @@ kaizencode-shadcn-registry/
 ├── opencode.json                   ← OpenCode MCP config (distributable)
 ├── src/
 │   ├── components/
-│   │   ├── component-card.astro    ← Showcase card for homepage
 │   │   └── ui/                     ← shadcn React components
 │   ├── layouts/main.astro          ← Base layout
 │   ├── lib/utils.ts                ← cn() utility
