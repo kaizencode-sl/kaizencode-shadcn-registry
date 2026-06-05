@@ -23,7 +23,7 @@ pnpm build        # astro build (for the demo site)
 
 ## Component conventions
 
-All registry components are **standalone** — they are never wrapped in extraneous parent elements. Each component exposes the root element it needs (e.g. a `<footer>` for a footer component) and accepts a `className` prop for layout customization. This ensures consumers can place components in any container they prefer. If you see a wrapper `<div>` or `<footer>` in a component's source, it's because the component itself requires that element.
+All registry components are **standalone** — they are never wrapped in extraneous parent elements. Each component exposes a root element and accepts a `className` prop for layout customization. This ensures consumers can place components in any container they prefer.
 
 ## Adding components locally (for development/demo)
 
@@ -85,7 +85,7 @@ pnpm dlx shadcn@latest list kaizencode-sl/kaizencode-shadcn-registry
 
 | Name | Description |
 |------|-------------|
-| [`developed-by-kaizencode`](src/components/ui/developed-by-kaizencode.tsx) | Footer with "Developed with ❤️ by Kaizencode" and link to kaizencode.es |
+| [`developed-by-kaizencode`](src/components/ui/developed-by-kaizencode.tsx) | "Developed with ❤️ by Kaizencode" with link to kaizencode.es |
 
 ### Config files
 

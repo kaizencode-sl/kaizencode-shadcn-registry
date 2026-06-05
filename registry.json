@@ -7,7 +7,7 @@
       "name": "developed-by-kaizencode",
       "type": "registry:ui",
       "title": "Developed By Kaizencode",
-      "description": "A footer component displaying 'Developed with ❤️ by Kaizencode' with an external link to kaizencode.es.",
+      "description": "Displays 'Developed with ❤️ by Kaizencode' with an external link to kaizencode.es.",
       "dependencies": ["lucide-react"],
       "files": [
         {
