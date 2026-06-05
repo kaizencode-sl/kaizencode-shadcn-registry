@@ -6,13 +6,13 @@ function DevelopedByKaizencode({ className, ...props }: React.ComponentProps<"fo
   return (
     <footer
       className={cn(
-        "flex items-center justify-center gap-1 px-6 py-4 text-sm text-muted-foreground",
+        "flex flex-wrap items-center justify-center gap-x-1 px-4 py-4 text-xs text-muted-foreground sm:gap-x-1.5 sm:text-sm",
         className
       )}
       {...props}
     >
       <span>Developed with</span>
-      <Heart className="size-4 fill-current text-red-500" />
+      <Heart className="size-3.5 fill-current text-red-500 sm:size-4" />
       <span>by</span>
       <a
         href="https://kaizencode.es"
@@ -21,7 +21,7 @@ function DevelopedByKaizencode({ className, ...props }: React.ComponentProps<"fo
         className="inline-flex items-center gap-0.5 font-medium text-foreground transition-colors hover:text-primary"
       >
         Kaizencode
-        <ExternalLink className="size-3" />
+        <ExternalLink className="size-3 sm:size-3.5" />
       </a>
     </footer>
   )
