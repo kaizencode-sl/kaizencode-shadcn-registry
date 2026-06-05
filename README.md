@@ -21,6 +21,10 @@ pnpm typecheck    # astro check
 pnpm build        # astro build (for the demo site)
 ```
 
+## Component conventions
+
+All registry components are **standalone** — they are never wrapped in extraneous parent elements. Each component exposes the root element it needs (e.g. a `<footer>` for a footer component) and accepts a `className` prop for layout customization. This ensures consumers can place components in any container they prefer. If you see a wrapper `<div>` or `<footer>` in a component's source, it's because the component itself requires that element.
+
 ## Adding components locally (for development/demo)
 
 shadcn components are installed individually — the CLI copies the source files directly into your project so you own them and can customize freely.

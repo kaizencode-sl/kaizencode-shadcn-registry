@@ -31,6 +31,10 @@ Live at: `https://kaizencode-sl.github.io/kaizencode-shadcn-registry/`
 
 `@/*` → `./src/*`. Always use `@/` imports (e.g. `@/components/ui/button`, `@/lib/utils`).
 
+## Component conventions
+
+Components must be **standalone** — never wrap a registry component in a parent element (e.g. `<footer>`, `<div>`) unless the wrapper is strictly part of the component's own implementation. Consumers should be free to place components in any container they choose. Page-level layout belongs in the demo page (`src/pages/`), not in the component itself.
+
 ## Adding components
 
 ```

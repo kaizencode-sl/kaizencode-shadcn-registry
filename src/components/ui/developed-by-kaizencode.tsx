@@ -2,9 +2,9 @@ import { ExternalLink, Heart } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-function DevelopedByKaizencode({ className, ...props }: React.ComponentProps<"footer">) {
+function DevelopedByKaizencode({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <footer
+    <div
       className={cn(
         "flex flex-wrap items-center justify-center gap-x-1 px-4 py-4 text-xs text-muted-foreground sm:gap-x-1.5 sm:text-sm",
         className
@@ -23,7 +23,7 @@ function DevelopedByKaizencode({ className, ...props }: React.ComponentProps<"fo
         Kaizencode
         <ExternalLink className="size-3 sm:size-3.5" />
       </a>
-    </footer>
+    </div>
   )
 }
 
