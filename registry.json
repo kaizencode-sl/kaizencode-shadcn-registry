@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "kaizencode",
-  "homepage": "https://kaizencode-sl.github.io/kaizencode-shadcn-registry",
+  "homepage": "https://github.com/kaizencode-sl/kaizencode-shadcn-registry",
   "items": [
     {
       "name": "developed-by-kaizencode",

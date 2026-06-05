@@ -8,9 +8,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "pnpm dlx shadcn@latest build && astro build",
+    "build": "astro build",
     "preview": "astro preview",
-    "build:registry": "pnpm dlx shadcn@latest build",
     "astro": "astro",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{ts,tsx,astro}\"",
