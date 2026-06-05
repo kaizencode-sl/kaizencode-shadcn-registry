@@ -22,6 +22,11 @@ A shadcn registry for creating, sharing, and demonstrating custom shadcn/ui comp
 
 Run in order: `lint → typecheck → build` before committing.
 
+## Demo site
+
+The demo site is deployed to GitHub Pages via `.github/workflows/deploy.yml` (GitHub Actions).
+Live at: `https://kaizencode-sl.github.io/kaizencode-shadcn-registry/`
+
 ## Path aliases
 
 `@/*` → `./src/*`. Always use `@/` imports (e.g. `@/components/ui/button`, `@/lib/utils`).
@@ -47,13 +52,21 @@ Available components are showcased on the homepage (`src/pages/index.astro`).
 ## Project structure
 
 ```
+├── .github/workflows/     ← deploy.yml (GitHub Pages deployment via Astro actions)
 ├── registry.json          ← Registry catalog (entry point for external consumption)
 ├── src/
-│   components/ui/         ← shadcn React components (also registry source files)
-│   layouts/               ← Astro layouts (.astro)
-│   lib/                   ← utilities (utils.ts → cn())
-│   pages/                 ← Astro routes (.astro)
-│   styles/                ← global.css (Tailwind v4 @import, theme vars)
+│   components/
+│     component-card.astro ← Reusable card for showcasing components on homepage
+│     ui/                  ← shadcn React components (also registry source files)
+│   layouts/
+│     main.astro           ← Base Astro layout (head, SEO, global styles)
+│   lib/
+│     utils.ts             ← cn() utility (clsx + tailwind-merge)
+│   pages/
+│     index.astro          ← Homepage — showcases all registry components
+│   styles/
+│     global.css           ← Tailwind v4 @import, CSS variables, theme
+public/                    ← Static assets (favicon, etc.)
 ```
 
 ## Testing
@@ -69,8 +82,3 @@ Ignore `dist/` and `.astro/` – they are gitignored and regenerated on every bu
 - **No semicolons**, double quotes, 2-space indent, trailing commas (es5).
 - Astro files use the `astro` parser (overridden in `.prettierrc`).
 - Run `pnpm format` before committing.
-
-## Generated files
-
-- `.astro/` – Astro internal cache (generated at dev/build time)
-- `dist/` – build output
