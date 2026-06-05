@@ -1,36 +1,48 @@
-# Astro + React + TypeScript + shadcn/ui
+# kaizencode-shadcn-registry
 
-This is a template for a new Astro project with React, TypeScript, and shadcn/ui.
+A [shadcn/ui](https://ui.shadcn.com) registry for creating, sharing, and demonstrating custom shadcn components. Components authored here can be consumed by any shadcn project via the registry API.
 
-## Adding components
+## Stack
 
-To add components to your app, run the following command:
+- **Astro v6** + **React 19** + **Tailwind CSS v4** (via `@tailwindcss/vite`)
+- **shadcn/ui** (style: `radix-rhea`)
+- **TypeScript ~6.0** (strict), **pnpm**, **Node >=22.12.0**
+
+## Developing
 
 ```bash
-npx shadcn@latest add button
+pnpm install
+pnpm dev          # dev server with HMR
+pnpm lint         # ESLint
+pnpm format       # Prettier
+pnpm typecheck    # astro check
 ```
 
-This will place the ui components in the `src/components` directory.
+## Adding components locally (for development/demo)
 
-## Using components
-
-To use the components in your app, import them in an `.astro` file:
-
-```astro
----
-import { Button } from "@/components/ui/button"
----
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Astro App</title>
-  </head>
-  <body>
-    <div class="grid h-screen place-items-center content-center">
-      <Button>Button</Button>
-    </div>
-  </body>
-</html>
+```bash
+pnpm dlx shadcn@latest add <component-name>
 ```
+
+Components are placed in `src/components/ui/`.
+
+## Using registry components in external projects
+
+```bash
+npx shadcn@latest add developed-by-kaizencode \
+  --registry https://github.com/kaizencode-sl/kaizencode-shadcn-registry
+```
+
+## Available Components
+
+| Component | Description |
+|-----------|-------------|
+| `developed-by-kaizencode` | Footer with "Developed with ❤️ by Kaizencode" and link to kaizencode.es |
+
+## Registry
+
+The root `registry.json` defines all distributable components. To add a new component:
+
+1. Create the component in `src/components/ui/`
+2. Add an item entry to `registry.json`
+3. Reference the source file path relative to project root

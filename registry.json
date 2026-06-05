@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kaizencode",
+  "homepage": "https://github.com/kaizencode-sl/kaizencode-shadcn-registry",
+  "items": [
+    {
+      "name": "developed-by-kaizencode",
+      "type": "registry:ui",
+      "title": "Developed By Kaizencode",
+      "description": "A footer component displaying 'Developed with ❤️ by Kaizencode' with an external link to kaizencode.es.",
+      "dependencies": ["lucide-react"],
+      "files": [
+        {
+          "path": "src/components/ui/developed-by-kaizencode.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

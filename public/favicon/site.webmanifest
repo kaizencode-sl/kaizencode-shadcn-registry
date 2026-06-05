@@ -1,0 +1,21 @@
+{
+  "name": "kaizencode-shadcn-registry",
+  "short_name": "kaizencode-shadcn-registry",
+  "icons": [
+    {
+      "src": "/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#393e42",
+  "background_color": "#393e42",
+  "display": "standalone"
+}
