@@ -25,7 +25,7 @@
         {
           "path": "opencode.json",
           "type": "registry:file",
-          "target": "opencode.json"
+          "target": "~/opencode.json"
         }
       ]
     }
