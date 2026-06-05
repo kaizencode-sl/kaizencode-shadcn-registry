@@ -1,0 +1,25 @@
+---
+export interface Props {
+  title: string
+  description: string
+  registryName: string
+}
+
+const { title, description, registryName } = Astro.props
+const installCommand = `pnpm dlx shadcn@latest add @kaizencode/${registryName}`
+---
+
+<div class="rounded-lg border">
+  <div class="p-4">
+    <h3 class="font-medium">{title}</h3>
+    <p class="mt-1 text-sm text-muted-foreground">{description}</p>
+    <div class="mt-3">
+      <slot />
+    </div>
+  </div>
+  <div class="border-t bg-muted/50 p-4">
+    <h4 class="text-sm font-medium">Installation</h4>
+    <pre
+      class="mt-2 overflow-x-auto rounded-lg border bg-background p-3 text-sm"><code>{installCommand}</code></pre>
+  </div>
+</div>

@@ -28,29 +28,32 @@ Components are placed in `src/components/ui/`.
 
 ## Using registry components in external projects
 
-### Via full URL
+Add the `@kaizencode` registry namespace to your project's `components.json`.
+
+### Via CLI
 
 ```bash
-npx shadcn@latest add developed-by-kaizencode \
-  --registry https://github.com/kaizencode-sl/kaizencode-shadcn-registry
+pnpm dlx shadcn@latest registry add @kaizencode=https://github.com/kaizencode-sl/kaizencode-shadcn-registry/r/{name}.json
 ```
 
-### Via `@kaizencode` namespace (recommended)
+### Or manually
 
-Add a `shadcn.json` file to your project root and configure the `kaizencode` registry alias:
+Add a `registries` field (object, not array) to your `components.json`:
 
 ```json
 {
-  "registries": [
-    "https://github.com/kaizencode-sl/kaizencode-shadcn-registry"
-  ]
+  "registries": {
+    "@kaizencode": "https://github.com/kaizencode-sl/kaizencode-shadcn-registry/r/{name}.json"
+  }
 }
 ```
 
-Then reference components using the `@kaizencode` scope:
+The `{name}` placeholder is replaced by the item name when you install.
+
+Then install any component using the `@kaizencode` scope:
 
 ```bash
-npx shadcn@latest add @kaizencode/developed-by-kaizencode
+pnpm dlx shadcn@latest add @kaizencode/developed-by-kaizencode
 ```
 
 ## Available Components
