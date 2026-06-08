@@ -1,6 +1,6 @@
 {
-  "name": "kaizencode-shadcn-registry",
-  "short_name": "kaizencode-shadcn-registry",
+  "name": "Kaizencode",
+  "short_name": "Kaizencode",
   "icons": [
     {
       "src": "/favicon/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#393e42",
-  "background_color": "#393e42",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone"
 }
